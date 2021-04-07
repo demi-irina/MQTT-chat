@@ -26,10 +26,10 @@ def mes():
 t1 = threading.Thread(target = mes)
 t1.start()
 
-name = input('enter your name')
+name = input('enter your name: ')
 
 while True:
     b = input()
     a = name + ': ' + b
-    client.publish('topic', name + ': ' + b)
+    client.publish('topic', a)
 
